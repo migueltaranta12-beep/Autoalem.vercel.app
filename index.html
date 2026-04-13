@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoalem | Showroom Exclusivo</title>
+    <title>Autoalem | Showroom Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { 
@@ -13,98 +13,57 @@
             --card: #111111; 
             --text: #ffffff;
             --glass: rgba(255, 255, 255, 0.05);
+            --wa-color: #25D366;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 20px 0; font-family: 'Inter', sans-serif;
             background-color: var(--bg);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(255, 62, 62, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(255, 62, 62, 0.1) 0px, transparent 50%);
-            color: var(--text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-image: radial-gradient(at 0% 0%, rgba(255, 62, 62, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(255, 62, 62, 0.1) 0px, transparent 50%);
+            color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh;
         }
 
         .container {
-            width: 90%;
-            max-width: 380px;
-            padding: 40px 25px;
-            background: var(--card);
-            border-radius: 24px;
+            width: 90%; max-width: 380px; padding: 35px 25px;
+            background: var(--card); border-radius: 28px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); text-align: center; backdrop-filter: blur(10px);
         }
 
-        .logo-container { margin-bottom: 30px; }
+        .logo { font-size: 2.2rem; font-weight: 900; letter-spacing: -2px; text-transform: uppercase; margin: 0; }
+        .logo span { color: var(--primary); text-shadow: 0 0 15px rgba(255, 62, 62, 0.5); }
         
-        .logo {
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-            margin: 0;
-        }
+        .badge { display: inline-block; background: var(--glass); padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255, 255, 255, 0.1); margin: 10px 0 20px; color: #aaa; }
 
-        .logo span {
-            color: var(--primary);
-            text-shadow: 0 0 15px rgba(255, 62, 62, 0.5);
-        }
+        .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin: 25px 0 15px; font-weight: 700; }
 
-        .badge {
-            display: inline-block;
-            background: var(--glass);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 10px;
-            color: #aaa;
-        }
-
-        .description {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin: 20px 0 35px;
-            line-height: 1.6;
-        }
-
-        .links-grid { display: flex; flex-direction: column; gap: 15px; }
+        .links-grid { display: flex; flex-direction: column; gap: 12px; }
 
         .btn {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
+            display: flex; align-items: center; justify-content: center; padding: 16px;
+            border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 0.9rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
+        /* Estilos específicos de botones */
         .btn-primary { background: var(--primary); color: white; }
-        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-wa { background: var(--wa-color); color: white; gap: 10px; }
         .btn-outline { background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.2); color: white; }
 
-        .footer {
-            margin-top: 40px;
-            font-size: 0.65rem;
-            color: #555;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .asesor-card {
+            background: rgba(255, 255, 255, 0.03); border-radius: 16px;
+            padding: 12px; margin-bottom: 10px; display: flex; align-items: center;
+            justify-content: space-between; border: 1px solid rgba(255, 255, 255, 0.05);
         }
+        .asesor-info { text-align: left; }
+        .asesor-name { font-size: 0.9rem; font-weight: 700; display: block; }
+        .asesor-tag { font-size: 0.7rem; color: #888; }
+        
+        .wa-icon-small { background: var(--wa-color); padding: 8px; border-radius: 10px; display: flex; align-items: center; }
+
+        .footer { margin-top: 35px; font-size: 0.6rem; color: #444; text-transform: uppercase; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -112,30 +71,41 @@
     <div class="container">
         <div class="logo-container">
             <h1 class="logo">AUTO<span>ALEM</span></h1>
-            <div class="badge">Usados Seleccionados</div>
+            <div class="badge">Showroom Córdoba</div>
         </div>
 
-        <p class="description">
-            Encontrá tu próximo vehículo con la mejor financiación de Córdoba. <b>Créditos Bancor y Santander.</b>
-        </p>
-
         <div class="links-grid">
-            <a href="https://wa.me/549351XXXXXXX?text=Hola%20Autoalem!%20Quiero%20consultar%20por%20un%20vehículo" class="btn btn-whatsapp" target="_blank">
-                🚀 HABLAR CON UN ASESOR
-            </a>
-            
             <a href="https://autoalem.com.ar/usados" class="btn btn-primary" target="_blank">
                 🏎️ VER STOCK DISPONIBLE
             </a>
-
-            <a href="https://www.google.com/maps?q=Av.+Leandro+N.+Alem+351,+X5000+Córdoba" class="btn btn-outline" target="_blank">
-                📍 AV. ALEM 351, CÓRDOBA
+            <a href="https://www.google.com/maps/search/?api=1&query=Autoalem+Av.+Leandro+N.+Alem+351+Cordoba" class="btn btn-outline" target="_blank">
+                📍 UBICACIÓN SHOWROOM
             </a>
         </div>
 
-        <div class="footer">
-            Desarrollado por Miguel • High Speed Link
-        </div>
+        <div class="section-title">Asesores en Línea</div>
+
+        <a href="https://wa.me/5493512644446?text=Hola%20Ignacio,%20vengo%20de%20Instagram%20y%20quería%20consultar%20por%20un%20auto" class="asesor-card" style="text-decoration: none; color: white;" target="_blank">
+            <div class="asesor-info">
+                <span class="asesor-name">Ignacio Ceballos</span>
+                <span class="asesor-tag">Asesor Comercial</span>
+            </div>
+            <div class="wa-icon-small">
+                <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412 0 6.556-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.82s.297.176.711.423c1.46.872 3.16 1.334 4.89 1.335 5.344 0 9.695-4.351 9.695-9.695 0-2.59-.101-5.019-2.841-7.759-2.741-2.74-5.17-2.84-7.761-2.84-5.345 0-9.695 4.351-9.695 9.695 0 1.848.522 3.655 1.508 5.215l-.105.183-1.011 3.69 3.793-.993z"/></svg>
+            </div>
+        </a>
+
+        <a href="https://wa.me/5493516313195?text=Hola%20Alejandro,%20vengo%20de%20Instagram%20y%20quería%20consultar%20por%20un%20auto" class="asesor-card" style="text-decoration: none; color: white;" target="_blank">
+            <div class="asesor-info">
+                <span class="asesor-name">Alejandro Schiaroli</span>
+                <span class="asesor-tag">Asesor Comercial</span>
+            </div>
+            <div class="wa-icon-small">
+                <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412 0 6.556-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.82s.297.176.711.423c1.46.872 3.16 1.334 4.89 1.335 5.344 0 9.695-4.351 9.695-9.695 0-2.59-.101-5.019-2.841-7.759-2.741-2.74-5.17-2.84-7.761-2.84-5.345 0-9.695 4.351-9.695 9.695 0 1.848.522 3.655 1.508 5.215l-.105.183-1.011 3.69 3.793-.993z"/></svg>
+            </div>
+        </a>
+
+        <div class="footer">Desarrollado por Miguel • High Speed</div>
     </div>
 
 </body>
