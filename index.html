@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoalem | Showroom Exclusivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #ff3e3e; 
+            --accent: #ff0000;
+            --bg: #050505; 
+            --card: #111111; 
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 62, 62, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 62, 62, 0.1) 0px, transparent 50%);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 380px;
+            padding: 40px 25px;
+            background: var(--card);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container { margin-bottom: 30px; }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .logo span {
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 62, 62, 0.5);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--glass);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 10px;
+            color: #aaa;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 20px 0 35px;
+            line-height: 1.6;
+        }
+
+        .links-grid { display: flex; flex-direction: column; gap: 15px; }
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        /* Efecto Hover General */
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--accent); }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-outline {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .btn-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: white; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.65rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <h1 class="logo">AUTO<span>ALEM</span></h1>
+            <div class="badge">Usados Seleccionados</div>
+        </div>
+
+        <p class="description">
+            Encontrá tu próximo vehículo con la mejor financiación de Córdoba. <b>Créditos Bancor y Santader.</b>
+        </p>
+
+        <div class="links-grid">
+            <a href="https://wa.me/5493512134567" class="btn btn-whatsapp">
+                🚀 HABLAR CON UN ASESOR
+            </a>
+            
+            <a href="#" class="btn btn-primary">
+                🏎️ VER STOCK DISPONIBLE
+            </a>
+
+            <a href="#" class="btn btn-outline">
+                📍 AV. ALEM 351, CÓRDOBA
+            </a>
+        </div>
+
+        <div class="footer">
+            Desarrollado por Migue • High Speed Link
+        </div>
+    </div>
+
+</body>
+</html>
